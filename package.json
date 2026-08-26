@@ -1,0 +1,36 @@
+{
+  "name": "connect-tickets",
+  "version": "1.0.0",
+  "description": "API RESTful de Gestão de Tickets / Helpdesk com TypeScript, Express e Swagger",
+  "type": "module",
+  "main": "dist/infrastructure/http/server.js",
+  "scripts": {
+    "dev": "tsx watch src/infrastructure/http/server.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/infrastructure/http/server.js"
+  },
+  "keywords": [
+    "helpdesk",
+    "tickets",
+    "express",
+    "typescript",
+    "swagger",
+    "clean-architecture"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
