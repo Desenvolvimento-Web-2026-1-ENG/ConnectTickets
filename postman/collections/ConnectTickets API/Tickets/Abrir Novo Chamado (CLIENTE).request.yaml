@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/tickets
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "titulo": "Monitor secundário piscando sem parar",
+      "descricao": "Cabo HDMI já foi trocado mas o sinal segue intermitente.",
+      "categoria": "Hardware",
+      "prioridade": "MEDIA",
+      "clienteId": 1
+    }
+order: 5000

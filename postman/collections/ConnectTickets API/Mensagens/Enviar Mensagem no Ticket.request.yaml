@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/tickets/2/mensagens
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "autorId": 3,
+      "conteudo": "Olá! Já substituí o componente defeituoso e testei o equipamento."
+    }
+order: 2000

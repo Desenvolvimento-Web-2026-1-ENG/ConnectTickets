@@ -1,0 +1,14 @@
+$kind: http-request
+name: Alterar Status / Resolver Ticket (ANALISTA)
+url: http://localhost:3000/api/v1/tickets/1/status
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "novoStatus": "RESOLVIDO",
+      "usuarioId": 3
+    }
+order: 7000

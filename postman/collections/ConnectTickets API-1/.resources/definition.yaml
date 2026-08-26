@@ -1,0 +1,3 @@
+$kind: collection
+name: ConnectTickets API
+description: Coleção de testes para a API de Helpdesk ConnectTickets (P1)

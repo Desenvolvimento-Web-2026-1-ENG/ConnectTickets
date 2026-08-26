@@ -1,0 +1,12 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/tickets/1/atribuir
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "analistaId": 3
+    }
+order: 6000

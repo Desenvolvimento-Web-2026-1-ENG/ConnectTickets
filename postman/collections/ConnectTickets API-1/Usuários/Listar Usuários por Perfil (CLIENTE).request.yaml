@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/usuarios?perfil=CLIENTE
+method: GET
+queryParams:
+  perfil: CLIENTE
+order: 2000
