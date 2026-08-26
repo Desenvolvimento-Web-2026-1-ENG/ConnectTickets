@@ -12,8 +12,8 @@ export class TicketController {
       const filtros = {
         status: status as StatusTicket | undefined,
         prioridade: prioridade as PrioridadeTicket | undefined,
-        clienteId: clienteId ? parseInt(clienteId as string, 10) : undefined,
-        analistaId: analistaId ? parseInt(analistaId as string, 10) : undefined
+        clienteId: clienteId ? parseInt(String(clienteId), 10) : undefined,
+        analistaId: analistaId ? parseInt(String(analistaId), 10) : undefined
       };
 
       const tickets = await this.ticketService.listar(filtros);
@@ -37,7 +37,7 @@ export class TicketController {
 
   buscarPorId = async (req: Request, res: Response): Promise<void> => {
     try {
-      const id = parseInt(req.params.id, 10);
+      const id = parseInt(String(req.params.id), 10);
       const ticket = await this.ticketService.buscarPorId(id);
       res.status(200).json(ticket);
     } catch (error: any) {
@@ -67,7 +67,7 @@ export class TicketController {
 
   atribuir = async (req: Request, res: Response): Promise<void> => {
     try {
-      const id = parseInt(req.params.id, 10);
+      const id = parseInt(String(req.params.id), 10);
       const { analistaId } = req.body;
       const ticketAtualizado = await this.ticketService.atribuir(id, {
         analistaId: Number(analistaId)
@@ -84,7 +84,7 @@ export class TicketController {
 
   alterarStatus = async (req: Request, res: Response): Promise<void> => {
     try {
-      const id = parseInt(req.params.id, 10);
+      const id = parseInt(String(req.params.id), 10);
       const { novoStatus, usuarioId } = req.body;
       const ticketAtualizado = await this.ticketService.alterarStatus(id, {
         novoStatus,
@@ -102,7 +102,7 @@ export class TicketController {
 
   excluir = async (req: Request, res: Response): Promise<void> => {
     try {
-      const id = parseInt(req.params.id, 10);
+      const id = parseInt(String(req.params.id), 10);
       await this.ticketService.excluir(id);
       res.status(204).send();
     } catch (error: any) {

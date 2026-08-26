@@ -17,7 +17,7 @@ export class UsuarioController {
 
   buscarPorId = async (req: Request, res: Response): Promise<void> => {
     try {
-      const id = parseInt(req.params.id, 10);
+      const id = parseInt(String(req.params.id), 10);
       const usuario = await this.usuarioService.buscarPorId(id);
       res.status(200).json(usuario);
     } catch (error: any) {

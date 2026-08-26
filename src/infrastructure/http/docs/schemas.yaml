@@ -1,0 +1,175 @@
+components:
+  schemas:
+    Usuario:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        nome:
+          type: string
+          example: "Carlos Silva"
+        email:
+          type: string
+          format: email
+          example: "carlos.silva@empresa.com"
+        perfil:
+          type: string
+          enum: ["CLIENTE", "ANALISTA"]
+          example: "CLIENTE"
+        criadoEm:
+          type: string
+          format: date-time
+          example: "2026-01-15T08:00:00.000Z"
+
+    CriarUsuarioDTO:
+      type: object
+      required:
+        - nome
+        - email
+        - perfil
+      properties:
+        nome:
+          type: string
+          example: "Mariana Souza"
+        email:
+          type: string
+          format: email
+          example: "mariana.souza@empresa.com"
+        perfil:
+          type: string
+          enum: ["CLIENTE", "ANALISTA"]
+          example: "CLIENTE"
+
+    Ticket:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        titulo:
+          type: string
+          example: "Falha na conexão com a VPN corporativa"
+        descricao:
+          type: string
+          example: "Não consigo acessar os servidores internos da filial após atualização do cliente VPN."
+        categoria:
+          type: string
+          example: "Redes"
+        prioridade:
+          type: string
+          enum: ["BAIXA", "MEDIA", "ALTA", "CRITICA"]
+          example: "ALTA"
+        status:
+          type: string
+          enum: ["ABERTO", "EM_ATENDIMENTO", "RESOLVIDO"]
+          example: "ABERTO"
+        clienteId:
+          type: integer
+          example: 1
+        analistaId:
+          type: integer
+          nullable: true
+          example: null
+        criadoEm:
+          type: string
+          format: date-time
+          example: "2026-03-01T10:00:00.000Z"
+        atualizadoEm:
+          type: string
+          format: date-time
+          example: "2026-03-01T10:00:00.000Z"
+
+    CriarTicketDTO:
+      type: object
+      required:
+        - titulo
+        - descricao
+        - categoria
+        - prioridade
+        - clienteId
+      properties:
+        titulo:
+          type: string
+          example: "Falha no acesso ao ERP"
+        descricao:
+          type: string
+          example: "Sistema trava na tela de emissão de notas fiscais."
+        categoria:
+          type: string
+          example: "Software"
+        prioridade:
+          type: string
+          enum: ["BAIXA", "MEDIA", "ALTA", "CRITICA"]
+          example: "ALTA"
+        clienteId:
+          type: integer
+          example: 1
+
+    AtribuirTicketDTO:
+      type: object
+      required:
+        - analistaId
+      properties:
+        analistaId:
+          type: integer
+          example: 3
+
+    AlterarStatusDTO:
+      type: object
+      required:
+        - novoStatus
+        - usuarioId
+      properties:
+        novoStatus:
+          type: string
+          enum: ["ABERTO", "EM_ATENDIMENTO", "RESOLVIDO"]
+          example: "RESOLVIDO"
+        usuarioId:
+          type: integer
+          description: "ID do analista responsável pela alteração de status"
+          example: 3
+
+    Mensagem:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        ticketId:
+          type: integer
+          example: 2
+        autorId:
+          type: integer
+          example: 3
+        autorPerfil:
+          type: string
+          enum: ["CLIENTE", "ANALISTA"]
+          example: "ANALISTA"
+        conteudo:
+          type: string
+          example: "Incidente investigado e fonte substituída com sucesso."
+        criadoEm:
+          type: string
+          format: date-time
+          example: "2026-03-01T12:05:00.000Z"
+
+    CriarMensagemDTO:
+      type: object
+      required:
+        - autorId
+        - conteudo
+      properties:
+        autorId:
+          type: integer
+          example: 3
+        conteudo:
+          type: string
+          example: "Estamos efetuando o teste na porta 8080."
+
+    ErroDTO:
+      type: object
+      properties:
+        mensagem:
+          type: string
+          example: "Mensagem descritiva do erro"

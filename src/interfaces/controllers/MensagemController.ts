@@ -6,7 +6,7 @@ export class MensagemController {
 
   listarPorTicket = async (req: Request, res: Response): Promise<void> => {
     try {
-      const ticketId = parseInt(req.params.id, 10);
+      const ticketId = parseInt(String(req.params.id), 10);
       const mensagens = await this.mensagemService.listarPorTicket(ticketId);
       res.status(200).json(mensagens);
     } catch (error: any) {
@@ -20,7 +20,7 @@ export class MensagemController {
 
   criar = async (req: Request, res: Response): Promise<void> => {
     try {
-      const ticketId = parseInt(req.params.id, 10);
+      const ticketId = parseInt(String(req.params.id), 10);
       const { autorId, conteudo } = req.body;
       const novaMensagem = await this.mensagemService.criar(ticketId, {
         autorId: Number(autorId),
