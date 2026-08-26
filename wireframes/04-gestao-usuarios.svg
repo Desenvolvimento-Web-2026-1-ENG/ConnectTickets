@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .sidebar { fill: #1e293b; }
+      .card { fill: #1e293b; stroke: #334155; stroke-width: 1; rx: 8; }
+      .header { fill: #0f172a; stroke: #334155; stroke-width: 1; }
+      .text-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 20px; fill: #f8fafc; }
+      .text-subtitle { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 15px; fill: #94a3b8; }
+      .text-body { font-family: 'Segoe UI', Inter, sans-serif; font-size: 13px; fill: #cbd5e1; }
+      .text-muted { font-family: 'Segoe UI', Inter, sans-serif; font-size: 11px; fill: #64748b; }
+      .btn-primary { fill: #2563eb; rx: 6; cursor: pointer; }
+      .btn-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 13px; fill: #ffffff; text-anchor: middle; }
+      .badge-client { fill: #047857; rx: 4; }
+      .badge-analyst { fill: #4338ca; rx: 4; }
+      .badge-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; fill: #ffffff; text-anchor: middle; }
+      .table-header { fill: #334155; }
+      .table-row { fill: #1e293b; stroke: #334155; stroke-width: 0.5; }
+      .input-box { fill: #0f172a; stroke: #475569; stroke-width: 1; rx: 6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" class="bg" />
+
+  <!-- Sidebar -->
+  <rect width="240" height="800" class="sidebar" />
+  <text x="30" y="50" class="text-title" fill="#38bdf8">🎫 ConnectTickets</text>
+  <text x="30" y="75" class="text-muted">Helpdesk &amp; Gestão v1.0</text>
+
+  <rect x="20" y="110" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="135" class="text-body">📊 Painel de Tickets</text>
+
+  <rect x="20" y="160" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="185" class="text-body">➕ Abrir Chamado</text>
+
+  <rect x="20" y="210" width="200" height="40" rx="6" fill="#2563eb" />
+  <text x="50" y="235" class="text-body" font-weight="bold" fill="#ffffff">👥 Gestão de Usuários</text>
+
+  <rect x="20" y="260" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="285" class="text-body">📚 Swagger Docs (/api-docs)</text>
+
+  <!-- User profile footer on sidebar -->
+  <rect x="20" y="730" width="200" height="50" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <circle cx="45" cy="755" r="15" fill="#3b82f6" />
+  <text x="45" y="760" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fff" text-anchor: middle">RT</text>
+  <text x="70" y="748" class="text-body" font-weight="600">Roberto Tech</text>
+  <text x="70" y="765" class="text-muted">ANALISTA (ID: 3)</text>
+
+  <!-- Top Header -->
+  <rect x="240" y="0" width="960" height="70" class="header" />
+  <text x="270" y="42" class="text-title">Gestão de Usuários e Perfis de Acesso</text>
+
+  <!-- Left Column: Form Novo Usuário (width 360) -->
+  <g transform="translate(270, 95)">
+    <rect x="0" y="0" width="360" height="560" class="card" />
+    <text x="25" y="35" class="text-subtitle" fill="#38bdf8">Cadastrar Novo Usuário</text>
+
+    <!-- Name Field -->
+    <text x="25" y="75" class="text-body" font-weight="bold">Nome Completo *</text>
+    <rect x="25" y="85" width="310" height="38" class="input-box" />
+    <text x="35" y="109" class="text-muted">Ex: Lucas Oliveira</text>
+
+    <!-- Email Field -->
+    <text x="25" y="150" class="text-body" font-weight="bold">E-mail Corporativo *</text>
+    <rect x="25" y="160" width="310" height="38" class="input-box" />
+    <text x="35" y="184" class="text-muted">Ex: lucas.oliveira@empresa.com</text>
+
+    <!-- Profile Radio -->
+    <text x="25" y="225" class="text-body" font-weight="bold">Perfil de Acesso *</text>
+
+    <!-- Option 1: CLIENTE -->
+    <rect x="25" y="240" width="310" height="42" rx="6" fill="#1e3a5f" stroke="#2563eb" stroke-width="1.5" />
+    <circle cx="45" cy="261" r="6" fill="#3b82f6" />
+    <circle cx="45" cy="261" r="3" fill="#ffffff" />
+    <text x="60" y="266" class="text-body" font-weight="bold" fill="#ffffff">CLIENTE</text>
+    <text x="140" y="266" class="text-muted">(Abertura e consulta de tickets)</text>
+
+    <!-- Option 2: ANALISTA -->
+    <rect x="25" y="295" width="310" height="42" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <circle cx="45" cy="316" r="6" fill="#475569" />
+    <text x="60" y="321" class="text-body">ANALISTA</text>
+    <text x="140" y="321" class="text-muted">(Atendimento e resolução)</text>
+
+    <!-- Info note -->
+    <rect x="25" y="360" width="310" height="85" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="35" y="385" class="text-muted">📌 <tspan fill="#93c5fd">Regra de Segurança:</tspan></text>
+    <text x="35" y="405" class="text-muted">Clientes não podem alterar status ou</text>
+    <text x="35" y="423" class="text-muted">assumir chamados de outros usuários.</text>
+
+    <!-- Submit Button -->
+    <rect x="25" y="470" width="310" height="42" class="btn-primary" />
+    <text x="180" y="496" class="btn-text">Salvar Usuário (POST)</text>
+  </g>
+
+  <!-- Right Column: User List Table (width 520) -->
+  <g transform="translate(650, 95)">
+    <rect x="0" y="0" width="520" height="560" class="card" />
+    <text x="25" y="35" class="text-subtitle">Usuários Cadastrados no Sistema</text>
+
+    <!-- Filter Buttons -->
+    <rect x="25" y="55" width="80" height="26" rx="4" fill="#2563eb" />
+    <text x="65" y="72" class="btn-text" font-size="11">Todos (4)</text>
+
+    <rect x="115" y="55" width="95" height="26" rx="4" fill="#334155" />
+    <text x="162" y="72" class="btn-text" font-size="11" fill="#cbd5e1">Clientes (2)</text>
+
+    <rect x="220" y="55" width="105" height="26" rx="4" fill="#334155" />
+    <text x="272" y="72" class="btn-text" font-size="11" fill="#cbd5e1">Analistas (2)</text>
+
+    <!-- Table Header -->
+    <rect x="25" y="95" width="470" height="30" class="table-header" rx="4" />
+    <text x="35" y="115" class="text-body" font-weight="bold">#</text>
+    <text x="65" y="115" class="text-body" font-weight="bold">Nome &amp; E-mail</text>
+    <text x="320" y="115" class="text-body" font-weight="bold">Perfil</text>
+    <text x="430" y="115" class="text-body" font-weight="bold">Ação</text>
+
+    <!-- User 1 -->
+    <rect x="25" y="135" width="470" height="48" class="table-row" rx="4" />
+    <text x="35" y="162" class="text-body" font-weight="bold">1</text>
+    <text x="65" y="155" class="text-body">Carlos Silva</text>
+    <text x="65" y="172" class="text-muted">carlos.silva@empresa.com</text>
+    <rect x="320" y="148" width="70" height="20" class="badge-client" />
+    <text x="355" y="162" class="badge-text">CLIENTE</text>
+    <text x="440" y="162" class="text-body" fill="#38bdf8">Selecionar</text>
+
+    <!-- User 2 -->
+    <rect x="25" y="190" width="470" height="48" class="table-row" rx="4" />
+    <text x="35" y="217" class="text-body" font-weight="bold">2</text>
+    <text x="65" y="210" class="text-body">Mariana Souza</text>
+    <text x="65" y="227" class="text-muted">mariana.souza@empresa.com</text>
+    <rect x="320" y="203" width="70" height="20" class="badge-client" />
+    <text x="355" y="217" class="badge-text">CLIENTE</text>
+    <text x="440" y="217" class="text-body" fill="#38bdf8">Selecionar</text>
+
+    <!-- User 3 -->
+    <rect x="25" y="245" width="470" height="48" class="table-row" rx="4" />
+    <text x="35" y="272" class="text-body" font-weight="bold">3</text>
+    <text x="65" y="265" class="text-body">Roberto Tech</text>
+    <text x="65" y="282" class="text-muted">roberto.tech@suporte.com</text>
+    <rect x="320" y="258" width="75" height="20" class="badge-analyst" />
+    <text x="357" y="272" class="badge-text">ANALISTA</text>
+    <text x="440" y="272" class="text-body" fill="#38bdf8">Selecionar</text>
+
+    <!-- User 4 -->
+    <rect x="25" y="300" width="470" height="48" class="table-row" rx="4" />
+    <text x="35" y="327" class="text-body" font-weight="bold">4</text>
+    <text x="65" y="320" class="text-body">Fernanda Help</text>
+    <text x="65" y="337" class="text-muted">fernanda.help@suporte.com</text>
+    <rect x="320" y="313" width="75" height="20" class="badge-analyst" />
+    <text x="357" y="327" class="badge-text">ANALISTA</text>
+    <text x="440" y="327" class="text-body" fill="#38bdf8">Selecionar</text>
+  </g>
+
+  <!-- Endpoint Reference Legend -->
+  <g transform="translate(270, 680)">
+    <rect x="0" y="0" width="900" height="85" class="card" fill="#0b1329" />
+    <text x="15" y="25" class="text-title" font-size="13" fill="#38bdf8">🔗 Mapeamento RESTful desta Tela:</text>
+    <text x="15" y="48" class="text-muted">GET /api/v1/usuarios?perfil= ➔ Listagem com filtro opcional por perfil</text>
+    <text x="15" y="68" class="text-muted">GET /api/v1/usuarios/:id ➔ Consulta detalhada do usuário</text>
+    <text x="520" y="48" class="text-muted">POST /api/v1/usuarios ➔ Cadastro de novo usuário ({ nome, email, perfil })</text>
+  </g>
+</svg>

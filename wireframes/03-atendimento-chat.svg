@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .sidebar { fill: #1e293b; }
+      .card { fill: #1e293b; stroke: #334155; stroke-width: 1; rx: 8; }
+      .header { fill: #0f172a; stroke: #334155; stroke-width: 1; }
+      .text-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 20px; fill: #f8fafc; }
+      .text-subtitle { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 15px; fill: #94a3b8; }
+      .text-body { font-family: 'Segoe UI', Inter, sans-serif; font-size: 13px; fill: #cbd5e1; }
+      .text-muted { font-family: 'Segoe UI', Inter, sans-serif; font-size: 11px; fill: #64748b; }
+      .btn-primary { fill: #2563eb; rx: 6; cursor: pointer; }
+      .btn-success { fill: #16a34a; rx: 6; cursor: pointer; }
+      .btn-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 13px; fill: #ffffff; text-anchor: middle; }
+      .badge-progress { fill: #b45309; rx: 4; }
+      .badge-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; text-anchor: middle; }
+      .chat-msg-client { fill: #1e3a5f; stroke: #2563eb; stroke-width: 1; rx: 8; }
+      .chat-msg-analyst { fill: #14532d; stroke: #16a34a; stroke-width: 1; rx: 8; }
+      .input-box { fill: #0f172a; stroke: #475569; stroke-width: 1; rx: 6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" class="bg" />
+
+  <!-- Sidebar -->
+  <rect width="240" height="800" class="sidebar" />
+  <text x="30" y="50" class="text-title" fill="#38bdf8">🎫 ConnectTickets</text>
+  <text x="30" y="75" class="text-muted">Helpdesk &amp; Gestão v1.0</text>
+
+  <rect x="20" y="110" width="200" height="40" rx="6" fill="#2563eb" />
+  <text x="50" y="135" class="text-body" font-weight="bold" fill="#ffffff">📊 Painel de Tickets</text>
+
+  <rect x="20" y="160" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="185" class="text-body">➕ Abrir Chamado</text>
+
+  <rect x="20" y="210" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="235" class="text-body">👥 Gestão de Usuários</text>
+
+  <rect x="20" y="260" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="285" class="text-body">📚 Swagger Docs (/api-docs)</text>
+
+  <!-- User profile footer on sidebar -->
+  <rect x="20" y="730" width="200" height="50" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <circle cx="45" cy="755" r="15" fill="#3b82f6" />
+  <text x="45" y="760" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fff" text-anchor: middle">RT</text>
+  <text x="70" y="748" class="text-body" font-weight="600">Roberto Tech</text>
+  <text x="70" y="765" class="text-muted">ANALISTA (ID: 3)</text>
+
+  <!-- Top Header -->
+  <rect x="240" y="0" width="960" height="70" class="header" />
+  <text x="270" y="42" class="text-title">Ticket #2: Computador não liga após queda de energia</text>
+  <rect x="920" y="20" width="130" height="26" class="badge-progress" />
+  <text x="985" y="37" class="badge-text">EM ATENDIMENTO</text>
+
+  <!-- Left Column: Details & Controls (width 320) -->
+  <g transform="translate(270, 90)">
+    <rect x="0" y="0" width="320" height="570" class="card" />
+    <text x="20" y="30" class="text-subtitle" fill="#38bdf8">Metadados do Chamado</text>
+
+    <!-- Meta Fields -->
+    <text x="20" y="65" class="text-muted">Categoria</text>
+    <text x="20" y="85" class="text-body" font-weight="bold">Hardware</text>
+
+    <text x="170" y="65" class="text-muted">Prioridade</text>
+    <text x="170" y="85" class="text-body" font-weight="bold" fill="#ef4444">🔴 CRÍTICA</text>
+
+    <text x="20" y="120" class="text-muted">Cliente Solicitante</text>
+    <text x="20" y="140" class="text-body">Mariana Souza (ID: 2)</text>
+    <text x="20" y="155" class="text-muted">mariana.souza@empresa.com</text>
+
+    <text x="20" y="190" class="text-muted">Analista Responsável</text>
+    <text x="20" y="210" class="text-body" fill="#38bdf8">Roberto Tech (ID: 3)</text>
+
+    <text x="20" y="245" class="text-muted">Aberto em</text>
+    <text x="20" y="265" class="text-body">01/03/2026 às 11:30</text>
+
+    <!-- Description Block -->
+    <text x="20" y="305" class="text-muted">Descrição Inicial</text>
+    <rect x="20" y="315" width="280" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="30" y="338" class="text-body" font-size="12">Gabinete não dá sinal de vida e a luz</text>
+    <text x="30" y="355" class="text-body" font-size="12">da fonte está apagada no setor financeiro.</text>
+
+    <!-- Analyst Controls Section -->
+    <text x="20" y="425" class="text-subtitle" fill="#fbbf24">Controles do Analista</text>
+
+    <!-- Button Reatribuir -->
+    <rect x="20" y="445" width="280" height="36" rx="6" fill="#334155" stroke="#475569" stroke-width="1" />
+    <text x="160" y="468" class="btn-text" font-size="12">🔄 Reatribuir Outro Analista</text>
+
+    <!-- Button Concluir / Resolver -->
+    <rect x="20" y="495" width="280" height="42" class="btn-success" />
+    <text x="160" y="521" class="btn-text" font-size="13">✅ Marcar como RESOLVIDO</text>
+  </g>
+
+  <!-- Right Column: Interactive Chat & Timeline (width 560) -->
+  <g transform="translate(610, 90)">
+    <rect x="0" y="0" width="560" height="570" class="card" />
+    <text x="25" y="30" class="text-subtitle">Histórico de Interações &amp; Mensagens</text>
+
+    <!-- Messages Container -->
+    <!-- Message 1 (Client) -->
+    <g transform="translate(25, 55)">
+      <rect x="0" y="0" width="510" height="70" class="chat-msg-client" />
+      <text x="15" y="22" class="text-body" font-weight="bold" fill="#60a5fa">Mariana Souza (CLIENTE)</text>
+      <text x="410" y="22" class="text-muted">01/03 11:35</text>
+      <text x="15" y="45" class="text-body">O incidente ocorreu logo após o trovão das 11h.</text>
+    </g>
+
+    <!-- Message 2 (Analyst) -->
+    <g transform="translate(25, 140)">
+      <rect x="0" y="0" width="510" height="75" class="chat-msg-analyst" />
+      <text x="15" y="22" class="text-body" font-weight="bold" fill="#4ade80">Roberto Tech (ANALISTA)</text>
+      <text x="410" y="22" class="text-muted">01/03 12:05</text>
+      <text x="15" y="45" class="text-body">Olá Mariana, assumi o chamado e estou a caminho da sua</text>
+      <text x="15" y="62" class="text-body">estação com uma nova fonte de teste.</text>
+    </g>
+
+    <!-- Message 3 (Analyst) -->
+    <g transform="translate(25, 230)">
+      <rect x="0" y="0" width="510" height="75" class="chat-msg-analyst" />
+      <text x="15" y="22" class="text-body" font-weight="bold" fill="#4ade80">Roberto Tech (ANALISTA)</text>
+      <text x="410" y="22" class="text-muted">01/03 12:40</text>
+      <text x="15" y="45" class="text-body">Fonte trocada por modelo ATX 500W. Sistema operacional</text>
+      <text x="15" y="62" class="text-body">iniciado normalmente e testes de estresse concluídos.</text>
+    </g>
+
+    <!-- New Message Input Area -->
+    <g transform="translate(25, 470)">
+      <rect x="0" y="0" width="410" height="70" class="input-box" />
+      <text x="15" y="30" class="text-muted">Digite sua resposta ou atualização de atendimento...</text>
+      <rect x="425" y="15" width="85" height="42" class="btn-primary" />
+      <text x="467" y="40" class="btn-text">Enviar</text>
+    </g>
+  </g>
+
+  <!-- Endpoint Reference Legend -->
+  <g transform="translate(270, 680)">
+    <rect x="0" y="0" width="900" height="85" class="card" fill="#0b1329" />
+    <text x="15" y="25" class="text-title" font-size="13" fill="#38bdf8">🔗 Mapeamento RESTful desta Tela:</text>
+    <text x="15" y="48" class="text-muted">GET /api/v1/tickets/:id ➔ Metadados completos do chamado</text>
+    <text x="15" y="68" class="text-muted">GET /api/v1/tickets/:id/mensagens ➔ Histórico de mensagens do chamado</text>
+    <text x="520" y="48" class="text-muted">POST /api/v1/tickets/:id/mensagens ➔ Nova mensagem (autorId + conteudo)</text>
+    <text x="520" y="68" class="text-muted">PATCH /api/v1/tickets/:id/status ➔ Finalizar chamado (RESOLVIDO)</text>
+  </g>
+</svg>

@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .sidebar { fill: #1e293b; }
+      .card { fill: #1e293b; stroke: #334155; stroke-width: 1; rx: 8; }
+      .header { fill: #0f172a; stroke: #334155; stroke-width: 1; }
+      .text-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 20px; fill: #f8fafc; }
+      .text-subtitle { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 15px; fill: #94a3b8; }
+      .text-body { font-family: 'Segoe UI', Inter, sans-serif; font-size: 13px; fill: #cbd5e1; }
+      .text-muted { font-family: 'Segoe UI', Inter, sans-serif; font-size: 11px; fill: #64748b; }
+      .btn-primary { fill: #2563eb; rx: 6; cursor: pointer; }
+      .btn-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 13px; fill: #ffffff; text-anchor: middle; }
+      .badge-open { fill: #1d4ed8; rx: 4; }
+      .badge-progress { fill: #b45309; rx: 4; }
+      .badge-resolved { fill: #15803d; rx: 4; }
+      .badge-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; fill: #ffffff; text-anchor: middle; }
+      .prio-critica { fill: #dc2626; rx: 3; }
+      .prio-alta { fill: #ea580c; rx: 3; }
+      .prio-media { fill: #0284c7; rx: 3; }
+      .prio-baixa { fill: #64748b; rx: 3; }
+      .table-header { fill: #334155; }
+      .table-row { fill: #1e293b; stroke: #334155; stroke-width: 0.5; }
+      .input-box { fill: #0f172a; stroke: #475569; stroke-width: 1; rx: 6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" class="bg" />
+
+  <!-- Sidebar -->
+  <rect width="240" height="800" class="sidebar" />
+  <text x="30" y="50" class="text-title" fill="#38bdf8">🎫 ConnectTickets</text>
+  <text x="30" y="75" class="text-muted">Helpdesk &amp; Gestão v1.0</text>
+
+  <rect x="20" y="110" width="200" height="40" rx="6" fill="#2563eb" />
+  <text x="50" y="135" class="text-body" font-weight="bold" fill="#ffffff">📊 Painel de Tickets</text>
+
+  <rect x="20" y="160" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="185" class="text-body">➕ Abrir Chamado</text>
+
+  <rect x="20" y="210" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="235" class="text-body">👥 Gestão de Usuários</text>
+
+  <rect x="20" y="260" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="285" class="text-body">📚 Swagger Docs (/api-docs)</text>
+
+  <!-- User profile footer on sidebar -->
+  <rect x="20" y="730" width="200" height="50" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <circle cx="45" cy="755" r="15" fill="#3b82f6" />
+  <text x="45" y="760" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fff" text-anchor: middle">RT</text>
+  <text x="70" y="748" class="text-body" font-weight="600">Roberto Tech</text>
+  <text x="70" y="765" class="text-muted">ANALISTA (ID: 3)</text>
+
+  <!-- Top Header -->
+  <rect x="240" y="0" width="960" height="70" class="header" />
+  <text x="270" y="42" class="text-title">Painel Geral de Tickets</text>
+  <rect x="1020" y="18" width="150" height="34" class="btn-primary" />
+  <text x="1095" y="40" class="btn-text">+ Novo Chamado</text>
+
+  <!-- Metric Cards -->
+  <g transform="translate(270, 90)">
+    <!-- Card Total Pendentes -->
+    <rect x="0" y="0" width="205" height="85" class="card" />
+    <text x="15" y="25" class="text-subtitle">Tickets Pendentes</text>
+    <text x="15" y="60" class="text-title" font-size="28" fill="#38bdf8">3</text>
+    <text x="60" y="60" class="text-muted">(ABERTO + EM_ATEND.)</text>
+
+    <!-- Card Abertos -->
+    <rect x="225" y="0" width="205" height="85" class="card" />
+    <text x="240" y="25" class="text-subtitle">Abertos (Fila)</text>
+    <text x="240" y="60" class="text-title" font-size="28" fill="#60a5fa">2</text>
+    <text x="285" y="60" class="text-muted">Aguardando analista</text>
+
+    <!-- Card Em Atendimento -->
+    <rect x="450" y="0" width="205" height="85" class="card" />
+    <text x="465" y="25" class="text-subtitle">Em Atendimento</text>
+    <text x="465" y="60" class="text-title" font-size="28" fill="#fbbf24">1</text>
+    <text x="510" y="60" class="text-muted">Em progresso</text>
+
+    <!-- Card Resolvidos -->
+    <rect x="675" y="0" width="225" height="85" class="card" />
+    <text x="690" y="25" class="text-subtitle">Resolvidos</text>
+    <text x="690" y="60" class="text-title" font-size="28" fill="#34d49a">1</text>
+    <text x="735" y="60" class="text-muted">Finalizados com sucesso</text>
+  </g>
+
+  <!-- Filters Area -->
+  <g transform="translate(270, 195)">
+    <rect x="0" y="0" width="900" height="60" class="card" />
+    <text x="15" y="35" class="text-body" font-weight="bold">Filtros (GET /api/v1/tickets):</text>
+
+    <!-- Filter Status -->
+    <rect x="200" y="15" width="150" height="30" class="input-box" />
+    <text x="210" y="35" class="text-body">Status: Todos ▼</text>
+
+    <!-- Filter Prioridade -->
+    <rect x="365" y="15" width="160" height="30" class="input-box" />
+    <text x="375" y="35" class="text-body">Prioridade: Todas ▼</text>
+
+    <!-- Filter Pendentes Shortcut -->
+    <rect x="540" y="15" width="180" height="30" rx="6" fill="#334155" />
+    <text x="630" y="35" class="btn-text" font-size="12">⚡ Apenas Pendentes</text>
+
+    <!-- Refresh Button -->
+    <rect x="735" y="15" width="150" height="30" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <text x="810" y="35" class="btn-text" font-size="12" fill="#cbd5e1">🔄 Atualizar Fila</text>
+  </g>
+
+  <!-- Data Table -->
+  <g transform="translate(270, 275)">
+    <!-- Header -->
+    <rect x="0" y="0" width="900" height="35" class="table-header" rx="4" />
+    <text x="15" y="22" class="text-body" font-weight="bold"># ID</text>
+    <text x="65" y="22" class="text-body" font-weight="bold">Título do Chamado</text>
+    <text x="370" y="22" class="text-body" font-weight="bold">Categoria</text>
+    <text x="470" y="22" class="text-body" font-weight="bold">Prioridade</text>
+    <text x="580" y="22" class="text-body" font-weight="bold">Status</text>
+    <text x="700" y="22" class="text-body" font-weight="bold">Cliente / Analista</text>
+    <text x="830" y="22" class="text-body" font-weight="bold">Ações</text>
+
+    <!-- Row 1 (ID 1) -->
+    <rect x="0" y="45" width="900" height="50" class="table-row" rx="4" />
+    <text x="15" y="75" class="text-body" font-weight="bold">#1</text>
+    <text x="65" y="75" class="text-body">Falha na conexão com a VPN corporativa</text>
+    <text x="370" y="75" class="text-body">Redes</text>
+    <rect x="470" y="62" width="60" height="18" class="prio-alta" />
+    <text x="500" y="75" class="badge-text">ALTA</text>
+    <rect x="580" y="60" width="80" height="22" class="badge-open" />
+    <text x="620" y="75" class="badge-text">ABERTO</text>
+    <text x="700" y="70" class="text-body">Carlos Silva</text>
+    <text x="700" y="85" class="text-muted">Sem analista</text>
+    <rect x="825" y="60" width="65" height="22" rx="4" fill="#2563eb" />
+    <text x="857" y="75" class="btn-text" font-size="11">Atender</text>
+
+    <!-- Row 2 (ID 2) -->
+    <rect x="0" y="105" width="900" height="50" class="table-row" rx="4" />
+    <text x="15" y="135" class="text-body" font-weight="bold">#2</text>
+    <text x="65" y="135" class="text-body">Computador não liga após queda de energia</text>
+    <text x="370" y="135" class="text-body">Hardware</text>
+    <rect x="470" y="122" width="65" height="18" class="prio-critica" />
+    <text x="502" y="135" class="badge-text">CRÍTICA</text>
+    <rect x="580" y="120" width="105" height="22" class="badge-progress" />
+    <text x="632" y="135" class="badge-text">EM ATENDIMENTO</text>
+    <text x="700" y="130" class="text-body">Mariana Souza</text>
+    <text x="700" y="145" class="text-muted">Resp: Roberto Tech</text>
+    <rect x="825" y="120" width="65" height="22" rx="4" fill="#0284c7" />
+    <text x="857" y="135" class="btn-text" font-size="11">Detalhes</text>
+
+    <!-- Row 3 (ID 4) -->
+    <rect x="0" y="165" width="900" height="50" class="table-row" rx="4" />
+    <text x="15" y="195" class="text-body" font-weight="bold">#4</text>
+    <text x="65" y="195" class="text-body">Redefinição de senha do portal de RH</text>
+    <text x="370" y="195" class="text-body">Acesso</text>
+    <rect x="470" y="182" width="60" height="18" class="prio-baixa" />
+    <text x="500" y="195" class="badge-text">BAIXA</text>
+    <rect x="580" y="180" width="80" height="22" class="badge-open" />
+    <text x="620" y="195" class="badge-text">ABERTO</text>
+    <text x="700" y="190" class="text-body">Mariana Souza</text>
+    <text x="700" y="205" class="text-muted">Sem analista</text>
+    <rect x="825" y="180" width="65" height="22" rx="4" fill="#2563eb" />
+    <text x="857" y="195" class="btn-text" font-size="11">Atender</text>
+
+    <!-- Row 4 (ID 3 - Resolvido) -->
+    <rect x="0" y="225" width="900" height="50" class="table-row" rx="4" opacity="0.7" />
+    <text x="15" y="255" class="text-body" font-weight="bold">#3</text>
+    <text x="65" y="255" class="text-body">Solicitação de licença do software CAD</text>
+    <text x="370" y="255" class="text-body">Software</text>
+    <rect x="470" y="242" width="60" height="18" class="prio-media" />
+    <text x="500" y="255" class="badge-text">MÉDIA</text>
+    <rect x="580" y="240" width="85" height="22" class="badge-resolved" />
+    <text x="622" y="255" class="badge-text">RESOLVIDO</text>
+    <text x="700" y="250" class="text-body">Carlos Silva</text>
+    <text x="700" y="265" class="text-muted">Resp: Fernanda Help</text>
+    <rect x="825" y="240" width="65" height="22" rx="4" fill="#475569" />
+    <text x="857" y="255" class="btn-text" font-size="11">Histórico</text>
+  </g>
+
+  <!-- Endpoint Reference Legend -->
+  <g transform="translate(270, 680)">
+    <rect x="0" y="0" width="900" height="85" class="card" fill="#0b1329" />
+    <text x="15" y="25" class="text-title" font-size="13" fill="#38bdf8">🔗 Mapeamento RESTful desta Tela:</text>
+    <text x="15" y="48" class="text-muted">GET /api/v1/tickets?status=&amp;prioridade= ➔ Lista geral filtrada</text>
+    <text x="15" y="68" class="text-muted">GET /api/v1/tickets/pendentes?prioridade= ➔ Fila rápida operacional para analistas</text>
+    <text x="520" y="48" class="text-muted">PATCH /api/v1/tickets/:id/atribuir ➔ Assume chamado</text>
+    <text x="520" y="68" class="text-muted">DELETE /api/v1/tickets/:id ➔ Exclusão de chamado</text>
+  </g>
+</svg>

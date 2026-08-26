@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .sidebar { fill: #1e293b; }
+      .card { fill: #1e293b; stroke: #334155; stroke-width: 1; rx: 8; }
+      .header { fill: #0f172a; stroke: #334155; stroke-width: 1; }
+      .text-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 20px; fill: #f8fafc; }
+      .text-subtitle { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 15px; fill: #94a3b8; }
+      .text-body { font-family: 'Segoe UI', Inter, sans-serif; font-size: 13px; fill: #cbd5e1; }
+      .text-muted { font-family: 'Segoe UI', Inter, sans-serif; font-size: 11px; fill: #64748b; }
+      .btn-primary { fill: #2563eb; rx: 6; cursor: pointer; }
+      .btn-secondary { fill: #334155; rx: 6; cursor: pointer; }
+      .btn-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 13px; fill: #ffffff; text-anchor: middle; }
+      .input-box { fill: #0f172a; stroke: #475569; stroke-width: 1; rx: 6; }
+      .info-box { fill: #1e3a5f; stroke: #2563eb; stroke-width: 1; rx: 6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" class="bg" />
+
+  <!-- Sidebar -->
+  <rect width="240" height="800" class="sidebar" />
+  <text x="30" y="50" class="text-title" fill="#38bdf8">🎫 ConnectTickets</text>
+  <text x="30" y="75" class="text-muted">Helpdesk &amp; Gestão v1.0</text>
+
+  <rect x="20" y="110" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="135" class="text-body">📊 Painel de Tickets</text>
+
+  <rect x="20" y="160" width="200" height="40" rx="6" fill="#2563eb" />
+  <text x="50" y="185" class="text-body" font-weight="bold" fill="#ffffff">➕ Abrir Chamado</text>
+
+  <rect x="20" y="210" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="235" class="text-body">👥 Gestão de Usuários</text>
+
+  <rect x="20" y="260" width="200" height="40" rx="6" fill="transparent" />
+  <text x="50" y="285" class="text-body">📚 Swagger Docs (/api-docs)</text>
+
+  <!-- User profile footer on sidebar -->
+  <rect x="20" y="730" width="200" height="50" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <circle cx="45" cy="755" r="15" fill="#10b981" />
+  <text x="45" y="760" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fff" text-anchor: middle">CS</text>
+  <text x="70" y="748" class="text-body" font-weight="600">Carlos Silva</text>
+  <text x="70" y="765" class="text-muted">CLIENTE (ID: 1)</text>
+
+  <!-- Top Header -->
+  <rect x="240" y="0" width="960" height="70" class="header" />
+  <text x="270" y="42" class="text-title">Abertura de Novo Chamado</text>
+
+  <!-- Main Form Card -->
+  <g transform="translate(270, 95)">
+    <rect x="0" y="0" width="900" height="560" class="card" />
+
+    <!-- Info Banner -->
+    <rect x="30" y="25" width="840" height="50" class="info-box" />
+    <text x="50" y="55" class="text-body" fill="#93c5fd">ℹ️ Abertura de chamado exclusiva para clientes cadastrados. Todo chamado inicia automaticamente com status <tspan font-weight="bold" fill="#ffffff">ABERTO</tspan>.</text>
+
+    <!-- Field: Cliente Solicitante -->
+    <text x="30" y="110" class="text-body" font-weight="bold">Cliente Solicitante *</text>
+    <rect x="30" y="120" width="400" height="40" class="input-box" />
+    <text x="45" y="145" class="text-body">Carlos Silva (carlos.silva@empresa.com) - ID: 1</text>
+
+    <!-- Field: Categoria -->
+    <text x="470" y="110" class="text-body" font-weight="bold">Categoria do Incidente *</text>
+    <rect x="470" y="120" width="400" height="40" class="input-box" />
+    <text x="485" y="145" class="text-body">Hardware (ex: Teclado, Monitor, Fonte) ▼</text>
+
+    <!-- Field: Titulo -->
+    <text x="30" y="195" class="text-body" font-weight="bold">Título Resumido do Chamado *</text>
+    <rect x="30" y="205" width="840" height="40" class="input-box" />
+    <text x="45" y="230" class="text-body">Falha de inicialização no notebook corporativo após atualização</text>
+
+    <!-- Field: Prioridade -->
+    <text x="30" y="280" class="text-body" font-weight="bold">Nível de Prioridade Estimado *</text>
+    <!-- Radio 1: BAIXA -->
+    <rect x="30" y="295" width="190" height="42" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <circle cx="50" cy="316" r="6" fill="#475569" />
+    <text x="65" y="321" class="text-body">BAIXA</text>
+
+    <!-- Radio 2: MEDIA -->
+    <rect x="245" y="295" width="190" height="42" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <circle cx="265" cy="316" r="6" fill="#475569" />
+    <text x="280" y="321" class="text-body">MÉDIA</text>
+
+    <!-- Radio 3: ALTA (Selected) -->
+    <rect x="460" y="295" width="190" height="42" rx="6" fill="#1e3a5f" stroke="#2563eb" stroke-width="2" />
+    <circle cx="480" cy="316" r="6" fill="#3b82f6" />
+    <circle cx="480" cy="316" r="3" fill="#ffffff" />
+    <text x="495" y="321" class="text-body" font-weight="bold" fill="#ffffff">ALTA</text>
+
+    <!-- Radio 4: CRITICA -->
+    <rect x="675" y="295" width="195" height="42" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <circle cx="695" cy="316" r="6" fill="#475569" />
+    <text x="710" y="321" class="text-body">CRÍTICA</text>
+
+    <!-- Field: Descrição Detalhada -->
+    <text x="30" y="375" class="text-body" font-weight="bold">Descrição Detalhada do Problema *</text>
+    <rect x="30" y="385" width="840" height="95" class="input-box" />
+    <text x="45" y="415" class="text-body">Ao ligar a máquina hoje pela manhã, a tela exibe mensagem de erro de boot e reinicia em loop.</text>
+    <text x="45" y="435" class="text-body">Já tentei remover periféricos USB e testar em outra tomada, sem sucesso.</text>
+
+    <!-- Form Action Buttons -->
+    <rect x="570" y="500" width="140" height="40" class="btn-secondary" />
+    <text x="640" y="525" class="btn-text" fill="#cbd5e1">Cancelar</text>
+
+    <rect x="730" y="500" width="140" height="40" class="btn-primary" />
+    <text x="800" y="525" class="btn-text">Criar Chamado</text>
+  </g>
+
+  <!-- Endpoint Reference Legend -->
+  <g transform="translate(270, 680)">
+    <rect x="0" y="0" width="900" height="85" class="card" fill="#0b1329" />
+    <text x="15" y="25" class="text-title" font-size="13" fill="#38bdf8">🔗 Mapeamento RESTful desta Tela:</text>
+    <text x="15" y="48" class="text-muted">POST /api/v1/tickets ➔ Criação do chamado (Payload: { titulo, descricao, categoria, prioridade, clienteId })</text>
+    <text x="15" y="68" class="text-muted">GET /api/v1/usuarios?perfil=CLIENTE ➔ Popula a seleção de clientes autorizados</text>
+  </g>
+</svg>
