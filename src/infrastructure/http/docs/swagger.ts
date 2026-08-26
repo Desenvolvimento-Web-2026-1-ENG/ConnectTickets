@@ -1,9 +1,4 @@
 import swaggerJSDoc from 'swagger-jsdoc';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const PORT = process.env.PORT || 3000;
 
@@ -28,13 +23,11 @@ const options: swaggerJSDoc.Options = {
     ]
   },
   apis: [
-    path.join(__dirname, '../routes/*.ts'),
-    path.join(__dirname, '../routes/*.js'),
-    path.join(__dirname, './schemas.yaml'),
-    path.join(process.cwd(), 'src/infrastructure/http/routes/*.ts'),
-    path.join(process.cwd(), 'src/infrastructure/http/docs/schemas.yaml'),
-    path.join(process.cwd(), 'dist/infrastructure/http/routes/*.js'),
-    path.join(process.cwd(), 'dist/infrastructure/http/docs/schemas.yaml')
+    './src/infrastructure/http/routes/*.ts',
+    './src/infrastructure/http/routes/*.js',
+    './src/infrastructure/http/docs/schemas.yaml',
+    './dist/infrastructure/http/routes/*.js',
+    './dist/infrastructure/http/docs/schemas.yaml'
   ]
 };
 
