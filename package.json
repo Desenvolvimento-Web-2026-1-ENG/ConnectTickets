@@ -20,11 +20,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^4.21.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.5",
     "@types/swagger-jsdoc": "^6.0.4",

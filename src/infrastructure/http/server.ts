@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import usuariosRoutes from './routes/usuarios.routes.js';
 import ticketsRoutes from './routes/tickets.routes.js';
 import mensagensRoutes from './routes/mensagens.routes.js';
@@ -8,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
+app.use(cors());
 app.use(express.json());
 
 // Rotas da API v1
