@@ -30,7 +30,7 @@
 - [6. Guia Passo a Passo de Execução (Backend + Frontend)](#-6-guia-passo-a-passo-de-execução-backend--frontend)
 - [7. Endpoints da API RESTful](#-7-endpoints-da-api-restful)
 - [8. Guia de Testes da API (Swagger UI e Postman)](#-8-guia-de-testes-da-api)
-- [9. Wireframes da Interface](#-9-wireframes-da-interface)
+- [9. Telas da Interface (Screenshots)](#-9-telas-da-interface-screenshots)
 - [10. Dados Pré-Cadastrados (Seed Data)](#-10-dados-pré-cadastrados-seed-data)
 - [11. Informações da Release v2.0.0-p2](#-11-informações-da-release-v200-p2)
 - [12. Licença](#-12-licença)
@@ -225,13 +225,21 @@ Todas as rotas da API possuem o prefixo base `/api/v1`:
 
 ---
 
-## 🎨 9. Wireframes da Interface
+## 📸 9. Telas da Interface (Screenshots)
 
-- 📊 **Painel Geral de Tickets:** [`wireframes/01-painel-tickets.svg`](./wireframes/01-painel-tickets.svg)
-- ➕ **Abertura de Chamado:** [`wireframes/02-abertura-ticket.svg`](./wireframes/02-abertura-ticket.svg)
-- 💬 **Atendimento & Chat:** [`wireframes/03-atendimento-chat.svg`](./wireframes/03-atendimento-chat.svg)
-- 👥 **Gestão de Usuários:** [`wireframes/04-gestao-usuarios.svg`](./wireframes/04-gestao-usuarios.svg)
-- 📖 **Documentação Técnica & Mapeamento:** [`docs/WIREFRAMES.md`](./docs/WIREFRAMES.md)
+### 📊 Painel Geral de Tickets
+![Painel Geral de Tickets](docs/screenshots/01-painel-tickets.png)
+
+### ➕ Abertura de Chamado
+![Abertura de Chamado](docs/screenshots/02-abertura-ticket.png)
+
+### 💬 Atendimento & Chat em Tempo Real
+![Atendimento e Chat](docs/screenshots/03-atendimento-chat.png)
+
+### 👥 Gestão de Usuários
+![Gestão de Usuários](docs/screenshots/04-gestao-usuarios.png)
+
+> 📖 Para a matriz técnica de mapeamento de cada componente de tela com as rotas RESTful da API, consulte [`docs/WIREFRAMES.md`](./docs/WIREFRAMES.md).
 
 ---
 

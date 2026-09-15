@@ -1,17 +1,24 @@
-# 🎨 Catálogo de Wireframes e Mapeamento de Integração da API ConnectTickets
+# 🎨 Catálogo de Telas e Mapeamento de Integração da API ConnectTickets
 
 Este documento apresenta a especificação técnica e visual das telas do sistema de Helpdesk **ConnectTickets**, acompanhado da matriz de mapeamento de cada componente de interface com as rotas RESTful da API.
 
 ---
 
-## 📱 1. Telas Projetadas e Arquivos SVG
+## 📱 1. Telas da Interface (Screenshots)
 
-Os protótipos em vetor SVG de alta resolução encontram-se na pasta [`../wireframes/`](../wireframes/):
+As capturas de tela da aplicação em React encontram-se na pasta [`screenshots/`](./screenshots/):
 
-1. **[`01-painel-tickets.svg`](../wireframes/01-painel-tickets.svg)** — *Painel Geral de Chamados e Fila Operacional de Atendimento*
-2. **[`02-abertura-ticket.svg`](../wireframes/02-abertura-ticket.svg)** — *Formulário de Abertura de Novo Chamado (Perfil Cliente)*
-3. **[`03-atendimento-chat.svg`](../wireframes/03-atendimento-chat.svg)** — *Tela de Detalhes, Timeline de Interações/Chat e Ações do Analista*
-4. **[`04-gestao-usuarios.svg`](../wireframes/04-gestao-usuarios.svg)** — *Gestão de Usuários e Alternância de Perfis (Cliente / Analista)*
+### 1. Painel Geral de Chamados e Fila Operacional de Atendimento
+![Painel Geral de Chamados](screenshots/01-painel-tickets.png)
+
+### 2. Formulário de Abertura de Novo Chamado (Perfil Cliente)
+![Abertura de Chamado](screenshots/02-abertura-ticket.png)
+
+### 3. Tela de Detalhes, Timeline de Interações/Chat e Ações do Analista
+![Atendimento e Chat](screenshots/03-atendimento-chat.png)
+
+### 4. Gestão de Usuários e Alternância de Perfis (Cliente / Analista)
+![Gestão de Usuários](screenshots/04-gestao-usuarios.png)
 
 ---
 
