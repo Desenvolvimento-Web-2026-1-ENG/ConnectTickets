@@ -6,7 +6,9 @@
   "main": "dist/infrastructure/http/server.js",
   "scripts": {
     "dev": "tsx watch src/infrastructure/http/server.ts",
+    "dev:client": "npm --prefix frontend run dev",
     "build": "tsc && tsc-alias",
+    "build:client": "npm --prefix frontend run build",
     "start": "node dist/infrastructure/http/server.js"
   },
   "keywords": [
